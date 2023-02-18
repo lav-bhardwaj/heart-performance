@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Heart </title>
+</head>
+
+
+
+<body>
+	<h1>Heart Failure Prediction</h1>
+	<form action="{{url_for('predict')}}" method="POST">
+		<div id="boxx_one">
+
+			<h2>Age</h2><input type="number" name="age" id='ff' required='required'>
+			<h2>Anaemia</h2><select id='selec' name="Anaemia" required="required" >
+				<option value=1>Yes</option>
+				<option value=0>No</option>
+			</select>
+			<h2>Creatinine</h2><input name="Creatinine" type="number" required='required' placeholder="0 to 2500">
+			<h2>Diabetes</h2><select id='selec' name='Diabetes' required='required'>
+				<option value=1>Yes</option>
+				<option value=0>No</option>
+			</select>
+			<h2>Ejection Fraction</h2><input name='Ejection_Fraction' type="number" required='required' placeholder="0 to 70">
+			<h2>High Blood Pressure</h2><select id='selec' name="High_Blood_Pressure" required='required'> 
+				<option value=1>Yes</option>
+				<option value=0>No</option>
+			</select>
+		</div>
+		<div id='boxx_two'>
+			<h2>Platelets</h2><input name='Platelets' type="number" required='required' placeholder="10,000 to 50,000">
+			<h2>Serum Creatinine</h2><input name='Serum_Creatinine' required='required' placeholder="0 to 2 example= 0.2">
+			<h2>Serum Sodium</h2><input name='Serum_Sodium' type="number" required='required' placeholder='130 to 150'>
+			<h2>Gender</h2><select id='selec' name="sex" required='required'>
+				<option value=1>Male</option>
+				<option value=0>Female</option>
+			</select>
+			<h2>Smoking</h2><select name="Smoking" id="selec" required='required'>
+				<option value=1>Yes</option>
+				<option value=0>No</option>
+			</select>
+			<h2>Time</h2><input name='Time' type="number" required='required' placeholder="0 to 300">
+
+
+		</div>
+		<button id='go' type="submit">Predict</button>
+	</form>
+<style >
+	
+body{
+  
+    color:rgb(233, 19, 19);
+    background-image: url('/static/styles/images.jfif');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+   
+}
+h1{
+    text-align: center;
+    font-size: 100px;
+}
+#boxx_one{
+border-style: dotted;
+background-color:transparent;
+text-align: left;
+margin: 250px;
+position: relative;
+padding: 10px;
+height: 490px;
+width: 500px;
+
+color: rgb(5, 3, 10);
+border-color: rgb(180, 170, 170);
+right: 200px;
+border: double;
+}
+input{
+    border: 25%;
+    border-style: double;
+    text-align: center;
+    position: relative;
+    left: 53%;
+    bottom: 44px;
+}
+#selec{
+     border-style: double;
+    text-align: center;
+    position: relative;
+    left: 53%;
+    bottom: 44px;
+    width: 60px;
+    height: 23px;
+}
+#boxx_two{
+    border-style: dotted;
+    background-color:transparent;
+    text-align: left;
+    margin: 950px;
+    position: relative;
+    padding: 10px;
+    height: 490px;
+    width: 500px;
+    bottom: 1470px;
+    color: rgb(5, 3, 10);
+    border-color: rgb(180, 170, 170);
+    right: 100px;
+    border: double; 
+}
+button{
+    position: relative;
+    bottom: 2355px;
+    left: 634px;
+    border-radius: 15%;
+    width: 134px;
+    height: 34px;
+
+}
+button:hover{
+    background-color: rgb(163, 23, 53);
+}
+	
+</style>
+
+</body>
+
+</html>
